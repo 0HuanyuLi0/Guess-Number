@@ -12,7 +12,10 @@ document.querySelector('.check').addEventListener('click', function () {
   // No Number
   if (!guess) {
     domTextContent('.message', '🈚 No Number~');
+  } else if (guess > 20 || guess < 1) {
+    domTextContent('.message', '😜 Between 1 to 20');
   }
+
   // Correct
   else if (guess === secretNumber) {
     domTextContent('.message', '💖 Correct Number!');
